@@ -1,0 +1,59 @@
+// src/assets/styles/main.scss
+
+/* ======================
+   全局样式入口文件
+   注意：不要在此使用 @import
+   ====================== */
+
+/* 重置样式 */
+@forward 'normalize.css';    
+
+/* 基础布局 */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+              Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #f8f9fa;
+}
+
+/* 全局容器 */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 通用辅助类 */
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 覆盖 Element Plus 默认样式 */
+.el-card {
+  margin-bottom: 20px;
+  
+  &__header {
+    padding: 12px 20px;
+  }
+}
+
+/* 动画定义 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

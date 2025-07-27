@@ -1,0 +1,14 @@
+/* src/assets/base.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #42b983;
+  --nav-height: 60px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
