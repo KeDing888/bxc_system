@@ -1,5 +1,8 @@
 name: Deploy
-on: [push]
+on:
+  push:
+    branches: [ "main" ]  # 必须匹配你的推送分支
+  workflow_dispatch:      # 允许手动触发
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,4 +16,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          
